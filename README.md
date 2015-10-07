@@ -26,6 +26,19 @@ whether or not a particular bug is likely to be a security issue.
 BugId can be used as a command-line utility through BugId.py and integrated into
 your own Python project using cBugId.py.
 
+Installation
+------------
+
+- Install python, available at https://www.python.org/downloads/windows/
+- Add the python directory to your user PATH (eg `C:\python27`)
+- Install Debugging Tools for Windows
+  - This now needs to be installed via the Windows SDK installer. 
+    Download the correct Windows SDK Installer for your OS, and then uncheck 
+    everything except `Debugging Tools`
+- Set the `cdb` environment variable to the path to `cdb.exe`, eg `C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\cdb.exe`
+- You may also want to set the `WinDbg` environment variable at the same time, if you are planning on using [EdgeDbg](https://github.com/SkyLined/EdgeDbg/blob/master/README.md)
+  - Environment Variables can be set from the command line `set cdb=C:\path\to\cdb.exe` or via the Environment Variables option in Advanced System Settings
+
 PageHeap.cmd
 ------------
 Page heap should be enabled for the target application to make detection and
